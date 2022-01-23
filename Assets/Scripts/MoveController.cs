@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Vector2 velocity;
     private Rigidbody2D rigidbody;
 

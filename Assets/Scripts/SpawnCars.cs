@@ -12,12 +12,6 @@ public class SpawnCars : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void SpawnOneCar()
     {
         GameObject g = Instantiate(car, transform.position , Quaternion.identity);

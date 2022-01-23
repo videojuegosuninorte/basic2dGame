@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PlayerMovementController : MonoBehaviour
+public class AnimationScenePlayerMovementController : MonoBehaviour
 {
     public float speed = 10f;
     private Rigidbody2D rigidbody2D;
@@ -22,16 +21,12 @@ public class PlayerMovementController : MonoBehaviour
 
         rigidbody2D.velocity = dir.normalized * speed;
 
+        
         GetComponent<Animator>().SetBool("isGoingFw", v > 0);
         GetComponent<Animator>().SetBool("isGoingBack", v < 0);
 
         GetComponent<Animator>().SetBool("isGoingLeft", h < 0);
         GetComponent<Animator>().SetBool("isGoingRigth", h > 0);
 
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.LoadSceneAsync(0);
     }
 }
